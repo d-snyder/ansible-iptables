@@ -1,0 +1,3 @@
+---
+allow-ports:
+  - { interface: "eth0", port: "80" }

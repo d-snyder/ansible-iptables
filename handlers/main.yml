@@ -1,0 +1,8 @@
+---
+- name: save iptables
+  action:
+    command service iptables save
+
+- name: start iptables
+  action:
+    command service iptables start
