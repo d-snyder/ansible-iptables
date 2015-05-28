@@ -10,7 +10,6 @@
 
 - name: Allow traffic
   command: "iptables -I INPUT 1 -i {{ item.interface }}  -p tcp --dport {{ item.port }}  -m state --state NEW,ESTABLISHED -j ACCEPT"
-  with_items:
-    allow-ports
+  with_items: allow-ports
   notify:
     - save iptables
